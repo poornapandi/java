@@ -1,0 +1,6 @@
+public class NameDisplay {
+    public static void main(String[] args) {
+        String myName = "Your Name"; // Replace with your actual name
+        System.out.println("My name is " + myName);
+    }
+}
