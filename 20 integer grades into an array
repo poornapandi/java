@@ -1,0 +1,33 @@
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class GradeAverage {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int[] grades = new int[20];
+        int count = 0;
+        int grade;
+
+        while (count < 20) {
+            System.out.print("Enter a grade (-1 to stop): ");
+            grade = input.nextInt();
+            if (grade == -1) {
+                break;
+            }
+            grades[count] = grade;
+            count++;
+        }
+
+       
+        double sum = 0;
+        for (int i = 0; i < count; i++) {
+            sum += grades[i];
+        }
+        double average = sum / count;
+
+       
+        DecimalFormat df = new DecimalFormat("#.00");
+        System.out.println("Average grade: " + df.format(average));
+    }
+}
+
