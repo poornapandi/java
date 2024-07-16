@@ -1,0 +1,17 @@
+public class Account {
+    private double balance;
+
+    public Account(double initialBalance) {
+        balance = initialBalance;
+    }
+
+    public void debit(double amount) {
+        if (amount <= balance) {
+            balance -= amount;
+            System.out.println("Debit successful. New balance: " + balance);
+        } else {
+            System.out.println("Debit amount exceeded account balance.");
+        }
+    }
+}
+
